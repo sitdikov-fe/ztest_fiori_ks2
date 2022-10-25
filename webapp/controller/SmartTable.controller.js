@@ -4,7 +4,7 @@ sap.ui.define([
     "use strict";
     return Controller.extend("ztest_fiori_ks.controller.SmartTable", {
         onInit: function() {
-            // this.getView().bindElement("/Products('4711')");
+             this.getView().bindElement("/ztestStr001Set('0002')");
           }
     });
 });
