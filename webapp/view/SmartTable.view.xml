@@ -5,15 +5,13 @@
    xmlns:mvc="sap.ui.core.mvc"
    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
 	 xmlns:smartTable="sap.ui.comp.smarttable">
-      <Page title="{i18n>homePageTitle}">
-        <content>
           <smartFilterBar:SmartFilterBar 
         		id="smartFilterBar"
         		entityType="zdocuments"
         		persistencyKey="SmartFilterPKey">
         		<smartFilterBar:controlConfiguration>
         			<smartFilterBar:ControlConfiguration
-        				key="Category" visibleInAdvancedArea="true"
+        				key="zcategory" visibleInAdvancedArea="true"
         				preventInitialDataFetchInValueHelpDialog="false">
         			</smartFilterBar:ControlConfiguration>
         		</smartFilterBar:controlConfiguration>
@@ -32,6 +30,4 @@
         		enableAutoBinding="true"
         		persistencyKey="SmartTablePKey">
         	</smartTable:SmartTable>
-        </content>
-      </Page>
 </mvc:View>
