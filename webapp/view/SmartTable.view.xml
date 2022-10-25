@@ -4,14 +4,14 @@
    xmlns:core="sap.ui.core"
    xmlns:mvc="sap.ui.core.mvc"
    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
-	 xmlns:smartTable="sap.ui.comp.smarttable">
+   xmlns:smartTable="sap.ui.comp.smarttable">
           <smartFilterBar:SmartFilterBar 
         		id="smartFilterBar"
-        		entityType="zdocuments"
+        		entityType="ztestStr"
         		persistencyKey="SmartFilterPKey">
         		<smartFilterBar:controlConfiguration>
         			<smartFilterBar:ControlConfiguration
-        				key="zcategory" visibleInAdvancedArea="true"
+        				key="zstclient" visibleInAdvancedArea="true"
         				preventInitialDataFetchInValueHelpDialog="false">
         			</smartFilterBar:ControlConfiguration>
         		</smartFilterBar:controlConfiguration>
@@ -21,7 +21,7 @@
         		smartFilterId="smartFilterBar" 
         		tableType="ResponsiveTable" 
         		editable="false"
-        		entitySet="" 
+        		entitySet="ztestStr001Set" 
         		useVariantManagement="true"
         		useTablePersonalisation="true" 
         		header="Позиции документа" 
@@ -30,4 +30,5 @@
         		enableAutoBinding="true"
         		persistencyKey="SmartTablePKey">
         	</smartTable:SmartTable>
+            
 </mvc:View>
