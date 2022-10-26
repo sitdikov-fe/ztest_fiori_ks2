@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="ztest_fiori_ks.controller.SmartTable"
+   controllerName="ztest_fiori_ks.controller.SmartTable"
    xmlns="sap.m"
    xmlns:core="sap.ui.core"
    xmlns:mvc="sap.ui.core.mvc"
@@ -20,7 +20,7 @@
         		id="smartTable_ResponsiveTable"
         		smartFilterId="smartFilterBar" 
         		tableType="ResponsiveTable" 
-        		editable="false"
+        		editable="true"
         		entitySet="ztestStr001Set" 
         		useVariantManagement="true"
         		useTablePersonalisation="true" 
