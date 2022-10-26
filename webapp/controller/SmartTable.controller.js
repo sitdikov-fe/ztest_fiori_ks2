@@ -5,10 +5,7 @@ sap.ui.define([
     "use strict";
     return Controller.extend("ztest_fiori_ks.controller.SmartTable", {
         onInit: function() {
-			var oDate = new sap.ui.model.json.JSONModel({
-				date: new Date()
-			}) ;
-			this.getView().setModel(oDate);
+            this.getView().bindElement("/ztestStr001Set('0001')");
           }
     });
 });
