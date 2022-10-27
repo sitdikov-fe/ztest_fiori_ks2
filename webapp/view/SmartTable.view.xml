@@ -19,6 +19,7 @@
 		smartFilterId="smartFilterBar"
 		tableType="ResponsiveTable"
 		editable="true"
+		editTogglable="true"
 		entitySet="ztestStr001Set"
 		useVariantManagement="true"
 		useTablePersonalisation="true"
