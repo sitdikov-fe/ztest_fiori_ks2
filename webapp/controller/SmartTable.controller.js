@@ -20,7 +20,7 @@ sap.ui.define([
 					userdata = new sap.ui.model.json.JSONModel();
 					userdata.setData(oData.results);
                     this.getView().byId("oSelectData").setModel(userdata, "oModel");
-                    sap.ui.getCore().byId("oSelectData").getModel().refresh(true);
+                    sap.ui.getView().byId("oSelectData").getModel().refresh(true);
                     // this.getView().byId("oSelectData").setValue(oData);
         			// sap.ui.getCore().setModel(userdata, "data");
         			// this.getView().byId("oNameOrg").setValue(oData.valueOf().NameOrg);
