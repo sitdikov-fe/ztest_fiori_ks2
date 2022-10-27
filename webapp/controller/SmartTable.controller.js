@@ -9,19 +9,6 @@ sap.ui.define([
         onInit: function() {
             oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
             this.getView().byId("oSelectData").setModel(oModel);
-          },
-        onInitialise: function (oEvent) {
-
-			var oTable = oEvent.getSource().getTable();
-			var aColumns = oTable.getColumns();
-
-			for (var i = 0; i < aColumns.length; i++) {
-				var sPath = oModel + aColumns[i].data("p13nData").columnKey;
-				aColumns[i].getTemplate().getDisplay().bindText(sPath);
-				aColumns[i].getTemplate().getEdit().bindValue(sPath);
-			}
-
-			oTable.bindRows("oModelMNA>/");
-		}
+          }
     });
 });
