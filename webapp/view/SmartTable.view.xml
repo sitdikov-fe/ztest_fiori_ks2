@@ -28,7 +28,7 @@
 		useExportToExcel="false"
 		enableAutoBinding="true"
 		initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
-		persistencyKey="SmartTablePKey" >
+		persistencyKey="SmartTablePKey">
 		<!-- <smartTable:customToolbar>
 			<OverflawToolbar design="Transparent">
 				<ToolbarSpacer/>
@@ -39,11 +39,21 @@
 		</smartTable:customToolbar> -->
 		<smartTable:customToolbar>
 			<OverflowToolbar design="Transparent">
-				<ToolbarSpacer/>
-				<OverflowToolbarButton icon="sap-icon://save" press="onSave" tooltip="Save"/>
-				<OverflowToolbarButton icon="sap-icon://add" press="onAddRow" tooltip="Add new record"/>
-				<OverflowToolbarButton icon="sap-icon://delete" press="onDelete" tooltip="Delete record(s)"/>
+				<ToolbarSpacer />
+				<OverflowToolbarButton icon="sap-icon://save" press="onSave" tooltip="Save" />
+				<OverflowToolbarButton icon="sap-icon://add" press="onAddRow" tooltip="Add new record" />
+				<OverflowToolbarButton icon="sap-icon://delete" press="onDelete" tooltip="Delete record(s)" />
 			</OverflowToolbar>
 		</smartTable:customToolbar>
+		<Table>
+			<!-- Columns must have unique IDs if table personalization service is used -->
+			<columns>
+				<Column id="Id" width="auto" minScreenWidth="Tablet">
+					<header>
+						<Label text="{/#Item/Id/@sap:label}" />
+					</header>
+				</Column>
+			</columns>
+		</Table>
 	</smartTable:SmartTable>
 </mvc:View>
