@@ -37,5 +37,11 @@
 				<OverflawToolbarButton icon="sap-icon://delete" press="onDelete" tooltip="Delete record(s)"/>
 			</OverflawToolbar>
 		</smartTable:customToolbar> -->
+		<smartTable:customToolbar>
+			<OverflowToolbar design="Transparent">
+				<ToolbarSpacer/>
+				<OverflowToolbarButton icon="sap-icon://activate" tooltip="Apply UI state changes" press="applyUiState"/>
+			</OverflowToolbar>
+		</smartTable:customToolbar>
 	</smartTable:SmartTable>
 </mvc:View>
