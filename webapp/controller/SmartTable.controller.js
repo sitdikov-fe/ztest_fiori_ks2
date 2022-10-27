@@ -4,15 +4,16 @@ sap.ui.define([
     "sap/m/MessageToast"
 ], function (Controller, JSONModel, MessageToast){
     "use strict";
-    // var oModel;
+    var oModel;
     return Controller.extend("ztest_fiori_ks.controller.SmartTable", {
         // onInit: function() {
         //     oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
         //     this.getView().byId("oSelectData").setModel(oModel);
         //   }
         onInit: function () {
-            
-			var oModel = this.getView().getModel();
+            oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
+            // this.getView().byId("oSelectData").setModel(oModel);
+			// var oModel = this.getView().getModel();
 			var sSet = "/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/";
 			oModel.read(sSet, {
 				success: function (oData) {
