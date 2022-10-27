@@ -16,8 +16,8 @@ sap.ui.define([
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
 					
-					userdata = new sap.ui.model.json.JSONModel();
-					userdata.setData(oData);
+					// userdata = new sap.ui.model.json.JSONModel();
+					// userdata.setData(oData);
                     console.log(oData);
         			// sap.ui.getCore().setModel(userdata, "data");
         			// this.getView().byId("oNameOrg").setValue(oData.valueOf().NameOrg);
