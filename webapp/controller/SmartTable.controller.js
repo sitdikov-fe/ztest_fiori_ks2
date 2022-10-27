@@ -9,6 +9,20 @@ sap.ui.define([
         onInit: function() {
             oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
             this.getView().byId("oSelectData").setModel(oModel);
+          },
+          onAddRow:  function() {
+            var readurl = "/ztestStr001Set";
+			oModel.read(readurl, {
+				success : function(oData, oResponse) {
+					
+					userdata = new sap.ui.model.json.JSONModel();
+					userdata.setData(oData);
+                    console.log(oData);
+        			// sap.ui.getCore().setModel(userdata, "data");
+        			// this.getView().byId("oNameOrg").setValue(oData.valueOf().NameOrg);
+					
+				}.bind(this)
+			});
           }
     });
 });
