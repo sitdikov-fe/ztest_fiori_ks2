@@ -12,14 +12,14 @@ sap.ui.define([
             this.getView().byId("oSelectData").setModel(oModel);
           },
           onAddRow:  function() {
-            var readurl = "/ztestStr001Set";
+            var readurl = "/ztestStr001";
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
 					//
                     //
 					userdata = new sap.ui.model.json.JSONModel();
 					userdata.setData(oData);
-                    console.log(userdata);
+                    console.log(oData);
         			// sap.ui.getCore().setModel(userdata, "data");
         			// this.getView().byId("oNameOrg").setValue(oData.valueOf().NameOrg);
 					
