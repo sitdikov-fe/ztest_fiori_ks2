@@ -27,6 +27,7 @@
 		showRowCount="true"
 		useExportToExcel="false"
 		enableAutoBinding="true"
+		initiallyVisibleFields="id"
 		persistencyKey="SmartTablePKey">
 	</smartTable:SmartTable>
 </mvc:View>
