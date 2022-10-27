@@ -29,34 +29,5 @@
 		enableAutoBinding="true"
 		initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
 		persistencyKey="SmartTablePKey">
-
-		<Table>
-		<columns>
-			<Column>
-				<Label text="{i18n>id1}" />
-			</Column>
-			<Column>
-				<Label text="{i18n>id2}" />
-			</Column>
-			<Column>
-				<Label text="{i18n>id3}" />
-			</Column>
-			<Column>
-				<Label text="{i18n>id4}" />
-			</Column>
-			<Column>
-				<Label text="{i18n>id5}" />
-			</Column>
-			<Column>
-				<Label text="{i18n>id6}" />
-			</Column>
-			<Column>
-				<Label text="{i18n>id7}" />
-			</Column>
-			<Column>
-				<Label text="{i18n>id8}" />
-			</Column>
-		</columns>
-	</Table>
 	</smartTable:SmartTable>
 </mvc:View>
