@@ -12,7 +12,7 @@ sap.ui.define([
         onInit: function () {
 
 			var oModel = this.getView().getModel();
-			var sSet = "/" + "DataSourceSet";
+			var sSet = "/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/";
 			oModel.read(sSet, {
 				success: function (oData) {
 					var oModelMNA = new JSONModel();
