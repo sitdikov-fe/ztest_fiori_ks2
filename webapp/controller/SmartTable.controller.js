@@ -16,6 +16,7 @@ sap.ui.define([
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
 					//
+                    //
 					// userdata = new sap.ui.model.json.JSONModel();
 					// userdata.setData(oData);
                     console.log(oData);
