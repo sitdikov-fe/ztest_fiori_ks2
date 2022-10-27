@@ -15,25 +15,17 @@ sap.ui.define([
             var readurl = "/ztestStr001Set";
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
-					var oModelMNA = new JSONModel();
-					oModelMNA.setData(oData.results);
-					this.getView().setModel(oModelMNA, "oModelMNA");
+					//
+                    //
+					userdata = new sap.ui.model.json.JSONModel();
+					userdata.setData(oData.results);
+                    this.getView().byId("oSelectData").setModel(oModel, "userdata");
+                    // this.getView().byId("oSelectData").setValue(oData);
+        			// sap.ui.getCore().setModel(userdata, "data");
+        			// this.getView().byId("oNameOrg").setValue(oData.valueOf().NameOrg);
 					
 				}.bind(this)
 			});
-          },
-          onInitialise: function (oEvent) {
-
-			var oTable = oEvent.getSource().getTable();
-			var aColumns = oTable.getColumns();
-
-			for (var i = 0; i < aColumns.length; i++) {
-				var sPath = "oModelMNA>" + aColumns[i].data("p13nData").columnKey;
-				aColumns[i].getTemplate().getDisplay().bindText(sPath);
-				aColumns[i].getTemplate().getEdit().bindValue(sPath);
-			}
-
-			oTable.bindRows("oModelMNA>/");
-		}
+          }
     });
 });
