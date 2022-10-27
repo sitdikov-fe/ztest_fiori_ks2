@@ -27,8 +27,9 @@
 		showRowCount="true"
 		useExportToExcel="false"
 		enableAutoBinding="true"
+		tableBindingPath="oModelMNA>/"
 		initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
-		persistencyKey="SmartTablePKey">
+		persistencyKey="SmartTablePKey" >
 		<smartTable:customToolbar>
 			<OverflawToolbar design="Transparent">
 				<ToolbarSpacer/>
