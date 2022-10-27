@@ -14,17 +14,10 @@ sap.ui.define([
             oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
 			// var oModel = this.getView().getModel();
 			// var sSet = "/" + "/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/";
-			oModel.read({
-				success: function (oData) {
+            this.getView().byId("oSelectData").setModel(oModel);
 					var oModelMNA = new JSONModel();
 					oModelMNA.setData(oData.results);
 					this.getView().byId("oSelectData").setModel(oModelMNA, "oModelMNA");
-				}.bind(this),
-				error: function (oResponse) {
-					sap.m.MessageToast.show("oData fetching failed");
-				}
-			});
-
 		},
         onInitialise: function (oEvent) {
 
