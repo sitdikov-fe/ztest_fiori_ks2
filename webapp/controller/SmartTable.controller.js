@@ -15,7 +15,7 @@ sap.ui.define([
             var readurl = "/ztestStr001Set";
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
-					
+					//
 					// userdata = new sap.ui.model.json.JSONModel();
 					// userdata.setData(oData);
                     console.log(oData);
