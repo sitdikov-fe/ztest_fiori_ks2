@@ -27,7 +27,7 @@ sap.ui.define([
 				}.bind(this)
 			});
           },
-          onDeleteRow: function(oEvent){
+          onDelete: function(oEvent){
 			var oTable = this.getView().byId('oSelectData');
 			oTable.removeItem(oEvent.getSource().getParent());
 		}
