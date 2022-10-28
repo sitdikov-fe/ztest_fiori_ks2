@@ -16,6 +16,7 @@ sap.ui.define([
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
 
+                    console.log(oData);
                     this.getView().byId("oSelectData").setModel(oModel);
                     // this.getView().byId("oSelectData").setModel(oModel, "userdata");
                     // this.getView().byId("oSelectData").getModel().refresh(true);
