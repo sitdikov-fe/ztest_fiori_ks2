@@ -17,9 +17,9 @@ sap.ui.define([
 				success : function(oData, oResponse) {
 
                     console.log(oData);
-                    // this.getView().byId("oSelectData").setModel(oModel);
-                    // this.getView().byId("oSelectData").setModel(oModel, "userdata");
-                    // this.getView().byId("oSelectData").getModel().refresh(true);
+                    this.getView().byId("oSelectData").setModel(oModel);
+                    this.getView().byId("oSelectData").setModel(oModel, "userdata");
+                    this.getView().byId("oSelectData").getModel().refresh(true);
                     this.getView().byId("oSelectData").setValue(oData);
         			// sap.ui.getCore().setModel(userdata, "data");
         			// this.getView().byId("oNameOrg").setValue(oData.valueOf().NameOrg);
