@@ -15,8 +15,6 @@ sap.ui.define([
             var readurl = "/ztestStr001Set";
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
-
-                    console.log(oData);
                     // this.getView().byId("oSelectData").setModel(oModel);
                     // this.getView().byId("oSelectData").setValue(oData);
                     this.getView().byId("oSelectData").getModel().refresh(true);
