@@ -30,6 +30,9 @@ sap.ui.define([
           onDelete: function(oEvent){
 			var oTable = this.getView().byId('oSelectData');
 			oTable.removeItem(oEvent.getSource().getParent());
-		}
+		},
+        onSave:  function() {
+            alert("Table saved");
+        }
     });
 });
