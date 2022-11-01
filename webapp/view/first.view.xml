@@ -33,6 +33,18 @@
                         icon="sap-icon://detail-view"/>
                     </content>
                     </Panel>
+
+                    <Panel
+                    class = "sapUiResponsiveMargin"
+                    width = "auto">
+                <content>
+                    <Button 
+                    text = "Test"
+                    press = ".onButtonTest"
+                    width="30%"
+                    icon="sap-icon://detail-view"/>
+                </content>
+                </Panel>
                     
                 </Page>
             </pages>

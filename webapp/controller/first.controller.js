@@ -9,6 +9,11 @@ sap.ui.define([
             //button for create order
             this.getOwnerComponent().getRouter().navTo("page2");
         },
+        onButtonTest: function(){
+            //button for view order
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("page6");
+        },
         onButtonView: function(){
             //button for view order
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);

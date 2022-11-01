@@ -132,6 +132,13 @@
 				"titleTarget": "",
 				"greedy": false,
 				"target": ["page5"]
+			},
+			{
+				"name": "page6",
+				"pattern": "ViewTable",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["page6"]
 			}],
 			"targets": {
 				"page1": {
@@ -168,6 +175,13 @@
 					"clearAggregation": true,
 					"viewName": "Order02",
 					"viewLevel": 3
+				},
+				"page6": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "SmartTest",
+					"viewLevel": 2
 				}
 			}
 		}
