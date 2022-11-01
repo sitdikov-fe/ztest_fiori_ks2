@@ -17,7 +17,7 @@ sap.ui.define([
             var readurl = "/ztestStr001Set";
 
             var oData = {
-                ProductId: 1
+                Id: 1
 
             }
 
