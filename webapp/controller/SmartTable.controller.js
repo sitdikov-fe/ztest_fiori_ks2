@@ -16,6 +16,11 @@ sap.ui.define([
           onAddRow:  function() {
             var readurl = "/ztestStr001Set";
 
+            var oData = {
+                ProductId: 1
+
+            }
+
             oModel.update(readurl, oData, {
 				success : function(oData, oResponse) {
 					
