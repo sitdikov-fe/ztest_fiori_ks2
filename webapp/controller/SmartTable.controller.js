@@ -16,7 +16,7 @@ sap.ui.define([
           onAddRow:  function() {
             var readurl = "/ztestStr001Set";
 
-            oModel.update(readurl, {
+            oModel.update(readurl, oData, {
 				success : function(oData, oResponse) {
 					
 				}.bind(this)
@@ -30,6 +30,8 @@ sap.ui.define([
 					
 				}.bind(this)
 			});
+
+            
           },
           onDelete: function(oEvent){
 			var oTable = this.getView().byId('oSelectData');
