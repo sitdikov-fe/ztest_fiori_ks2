@@ -15,12 +15,8 @@ sap.ui.define([
             var readurl = "/ztestStr001Set";
 			oModel.read(readurl, {
 				success : function(oData, oResponse) {
-                    // this.getView().byId("oSelectData").setModel(oModel);
-                    // this.getView().byId("oSelectData").setValue(oData);
+                    console.log(this.getView().byId("oSelectData").getModel().getData());
                     this.getView().byId("oSelectData").getModel().refresh(true);
-                    
-        			// sap.ui.getCore().setModel(userdata, "data");
-        			// this.getView().byId("oNameOrg").setValue(oData.valueOf().NameOrg);
 					
 				}.bind(this)
 			});
