@@ -18,8 +18,8 @@ sap.ui.define([
     
     return Controller.extend("ztest_fiori_ks.controller.Create02", {
 		onInit : function (){
-			// oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
-			// this.getView().byId("oSelectClient").setModel(oModel);
+			oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
+			this.getView().byId("oSelectClient").setModel(oModel);
 
 			this._getDateResorces();
 			var myUniqueID = uid();
