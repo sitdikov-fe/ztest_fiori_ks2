@@ -21,13 +21,13 @@ sap.ui.define([
 			oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
 			this.getView().byId("oSelectClient").setModel(oModel);
 
-			this._getDateResorces();
+			// this._getDateResorces();
 			var myUniqueID = uid();
 			id = myUniqueID;
 			var newDate = new Date();
 			date = newDate;
 
-			this._getDateResorces();
+			// this._getDateResorces();
 		},
 		_getDateResorces: function(){
 			type = sap.ui.getCore().getModel("oSelectType");
