@@ -10,6 +10,7 @@ sap.ui.define([
         onInit: function() {
             oModel = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZTEST_FIORI_KOSI_SRV/", true);
             this.getView().byId("oSelectData").setModel(oModel);
+            debugger;
           },
           onAddRow:  function() {
             var readurl = "/ztestStr001Set";
