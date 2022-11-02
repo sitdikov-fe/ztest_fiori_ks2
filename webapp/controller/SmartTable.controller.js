@@ -14,24 +14,7 @@ sap.ui.define([
             console.log(oModel);
           },
           onAddRow:  function(oData) {
-            var readurl = "/ztestStr001Set &$inlinecount=allpages";
-
-            // var oData = {
-            //     Id: 1,
-            //     Name: "",
-            //     Nametype: "",
-            //     Quantity: 0,
-            //     Price: 0,
-            //     Fullprice: 0,
-            //     Storege: "",
-            //     Quanstorage: 0
-            // }
-
-            // oModel.update(readurl, oData, {
-			// 	success : function(oData, oResponse) {
-					
-			// 	}.bind(this)
-			// });
+            var readurl = "/ztestStr001Set";
 
             oModel.read(readurl, {
 				success : function(oData, oResponse) {
@@ -41,12 +24,6 @@ sap.ui.define([
 					
 				}.bind(this)
 			});
-
-            
-          },
-          onDelete: function(oEvent){
-			var oTable = this.getView().byId('oSelectData');
-			// oTable.removeItem(oEvent.getSource().getParent());
-		}
+          }
     });
 });
