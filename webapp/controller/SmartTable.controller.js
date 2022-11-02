@@ -16,22 +16,22 @@ sap.ui.define([
           onAddRow:  function() {
             var readurl = "/ztestStr001Set";
 
-            var oData = {
-                Id: 1,
-                Name: "",
-                Nametype: "",
-                Quantity: 0,
-                Price: 0,
-                Fullprice: 0,
-                Storege: "",
-                Quanstorage: 0
-            }
+            // var oData = {
+            //     Id: 1,
+            //     Name: "",
+            //     Nametype: "",
+            //     Quantity: 0,
+            //     Price: 0,
+            //     Fullprice: 0,
+            //     Storege: "",
+            //     Quanstorage: 0
+            // }
 
-            oModel.update(readurl, oData, {
-				success : function(oData, oResponse) {
+            // oModel.update(readurl, oData, {
+			// 	success : function(oData, oResponse) {
 					
-				}.bind(this)
-			});
+			// 	}.bind(this)
+			// });
 
             oModel.read(readurl, {
 				success : function(oData, oResponse) {
