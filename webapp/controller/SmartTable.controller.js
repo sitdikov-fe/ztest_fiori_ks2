@@ -21,11 +21,11 @@ sap.ui.define([
 
             };
 
-            oModel.update(readurl, oData, {
-				success : function(oData, oResponse) {
+            // oModel.update(readurl, oData, {
+			// 	success : function(oData, oResponse) {
 					
-				}.bind(this)
-			});
+			// 	}.bind(this)
+			// });
 
             oModel.read(readurl, {
 				success : function(oData, oResponse) {
