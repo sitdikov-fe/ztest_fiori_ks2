@@ -78,7 +78,7 @@
 				"settings": {
 					"defaultOperationMode": "Server",
 					"defaultBindingMode": "OneTime",
-					"defaultCountMode": "Request"
+					"defaultCountMode": "Inline"
 				},
 				"dataSource": "ZTEST_FIORI_KOSI_SRV",
 				"preload": true
