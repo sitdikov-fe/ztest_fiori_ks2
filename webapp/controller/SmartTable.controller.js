@@ -17,9 +17,9 @@ sap.ui.define([
             var readurl = "/ztestStr001Set";
 
             var oData = {
-                Id: 1
+                id: 1
 
-            }
+            };
 
             oModel.update(readurl, oData, {
 				success : function(oData, oResponse) {
