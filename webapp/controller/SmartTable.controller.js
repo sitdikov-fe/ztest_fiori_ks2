@@ -14,7 +14,7 @@ sap.ui.define([
             console.log(oModel);
           },
           onAddRow:  function(oData) {
-            var readurl = "/ztestStr001Set";
+            var readurl = "/ztestStr001Set &$inlinecount=allpages";
 
             // var oData = {
             //     Id: 1,
