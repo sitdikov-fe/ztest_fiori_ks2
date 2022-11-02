@@ -13,19 +13,14 @@ sap.ui.define([
             console.log("init");
             console.log(oModel);
           },
-          onAddRow:  function() {
+          onAddRow:  function(oData) {
             var readurl = "/ztestStr001Set";
 
-            var oData = {
-                id: 1
-
-            };
-
-            // oModel.update(readurl, oData, {
-			// 	success : function(oData, oResponse) {
+            oModel.update(readurl, oData, {
+				success : function(oData, oResponse) {
 					
-			// 	}.bind(this)
-			// });
+				}.bind(this)
+			});
 
             oModel.read(readurl, {
 				success : function(oData, oResponse) {
