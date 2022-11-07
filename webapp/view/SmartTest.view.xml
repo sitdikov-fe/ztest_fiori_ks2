@@ -30,6 +30,7 @@
                                 showRowCount="true"
                                 useExportToExcel="false"
                                 enableAutoBinding="true"
+                                tableBindingPath="Single"
                                 initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
                                 persistencyKey="SmartTablePKey">
                                 <!-- <smartTable:customToolbar>
