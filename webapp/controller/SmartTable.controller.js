@@ -18,10 +18,8 @@ sap.ui.define([
 
             oModel.read(readurl, {
 				success : function(oData, oResponse) {
-
                     // console.log("addrow");
                     this.getView().byId("oSelectData").getModel().refresh(true);
-					
 				}.bind(this)
 			});
           }
