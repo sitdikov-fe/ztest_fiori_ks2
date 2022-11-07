@@ -23,6 +23,7 @@
 		useVariantManagement="true"
 		useTablePersonalisation="true"
 		header="Позиции документа"
+		selectionMode="Single"
 		showRowCount="true"
 		useExportToExcel="false"
 		enableAutoBinding="true"
