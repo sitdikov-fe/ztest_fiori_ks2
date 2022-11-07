@@ -1,4 +1,4 @@
-<mvc:View controllerName="ztest_fiori_ks.controller.SmartTable" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m"
+<mvc:View controllerName="ztest_fiori_ks.controller.SmartTest" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
     xmlns:grid="sap.ui.layout.cssgrid" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:c="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
     class="GridDataSample" id="view">
@@ -30,7 +30,6 @@
                                 showRowCount="true"
                                 useExportToExcel="false"
                                 enableAutoBinding="true"
-                                selectionMode="Single"
                                 initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
                                 persistencyKey="SmartTablePKey">
                                 <!-- <smartTable:customToolbar>
