@@ -1,11 +1,3 @@
 {
-    "Sales": {
-        "SalesOrder": "",
-        "SoldToParty": "",
-        "CustomerReference": "",
-        "RequestedDeliveryDate": "",
-        "OveralllStatus": "",
-        "editable": true,
-        "neweditable": true
-    }
+    "Sales": []
 }
