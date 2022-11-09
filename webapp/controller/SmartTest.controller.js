@@ -166,7 +166,7 @@ sap.ui.define([
 				that.getView().getModel("newModel").setProperty("/edit", true);//we set property add to true so that it appers when click on save button
 				that.getView().getModel("newModel").setProperty("/add", true);//we set property add to true so that it appers when click on save button
 				that.getView().getModel("newModel").setProperty("/delete", true);//we set property delete to true so that it appers when click on save button
-				MessageToast.show("Record updated Successfully");//throws a message
+				MessageToast.show("Record updated successfully");//throws a message
 				return;
 
 			} else if (this.mode === "Add") {
@@ -182,7 +182,7 @@ sap.ui.define([
 
 						if (sData[i].editable === true) {//check feilds which are Appended by click on Add
 							if (sData[i].Id === "") {//check if the entered data is black then it throws a error message
-								MessageToast.show("ID is cannot be empty");
+								MessageToast.show("ID cannot be empty");
 								return;
 							} else {
 								sData[i].editable = false;//if record is not blank set editable to false
