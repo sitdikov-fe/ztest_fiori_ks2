@@ -25,6 +25,10 @@
 					"localUri": "localService/ZTEST_FIORI_KOSI_SRV/metadata.xml",
 					"annotations": []
 				}
+			},
+			"tableData_alias": {
+				"uri": "model/sample.json",
+				"type": "JSON"
 			}
 		}
 	},
@@ -72,6 +76,10 @@
 				"settings": {
 					"bundleName": "ztest_fiori_ks.i18n.i18n"
 				}
+			},
+			"tableData": {
+				"type": "sap.ui.model.JSONModel",
+				"dataSource": "tableData_alias"
 			},
 			"": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
