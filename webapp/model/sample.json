@@ -1,5 +1,5 @@
-[
-    {
+{
+    "Sales": {
         "SalesOrder": "",
         "SoldToParty": "",
         "CustomerReference": "",
@@ -8,4 +8,4 @@
         "editable": true,
         "neweditable": true
     }
-  ]
+}
