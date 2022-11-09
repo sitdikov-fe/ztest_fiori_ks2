@@ -78,7 +78,7 @@
 				}
 			},
 			"tableData": {
-				"type": "sap.ui.model.JSONModel",
+				"type": "sap.ui.model.json.JSONModel",
 				"dataSource": "tableData_alias"
 			},
 			"": {
