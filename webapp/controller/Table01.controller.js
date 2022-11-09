@@ -7,7 +7,7 @@ sap.ui.define([
 ], function(Controller, JSONModel, MessageToast, Filter, FilterOperator) {
 	"use strict";
 
-	return Controller.extend("ztest_fiori_ks.controller.SmartTest", {
+	return Controller.extend("ztest_fiori_ks.controller.Table01", {
 		onInit: function(oEvent) {
 			this.mode = undefined;
 
