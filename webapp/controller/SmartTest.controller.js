@@ -31,19 +31,6 @@ sap.ui.define([
 
 			});
 			this.getView().setModel(newModel1, "newModel");
-
-			var statusModel1 = new JSONModel({
-				"reference": [{
-					"CustomerReference": "A"
-				}, {
-					"CustomerReference": "B"
-
-				}, {
-					"CustomerReference": "C"
-
-				}]
-			});
-			this.getView().setModel(statusModel1, "statusModel");
 		},
 		
 		onDelete: function(oEvent) {
@@ -124,11 +111,14 @@ sap.ui.define([
 			that.getView().getModel("newModel").setProperty("/editable", true);
 
 			var newRecord = {//create a dummy record to push when user click on Add
-				"SalesOrder": "",
-				"SoldToParty": "",
-				"CustomerReference": "",
-				"RequestedDeliveryDate": "",
-				"OveralllStatus": "",
+				"Id": "",
+				"Name": "",
+				"NameType": "",
+				"Quantity": "",
+				"Price": "",
+                "FullPrice": "",
+                "Storage": "",
+                "FullStorage": "",
 				"editable": true,
 				"neweditable": true
 			};
@@ -142,16 +132,16 @@ sap.ui.define([
 			var enteredText = oEvent.getParameters("value").value;
 			this.recordexists = undefined;
 			// var index=undefined;
-			var sData = this.getView().getModel("sOrder1").getData().Sales;//get the moedl data
+			var sData = this.getView().getModel("sOrder1").getData().Sales;//get the model data
 			var spath = parseInt(oEvent.getSource().getBindingContext("sOrder1").getPath().split("/")[2]);//get the index of enter data row
 
 			var index = sData.findIndex(function(item, sindex) {//findIndex is a method used to validate if same value found it returns index position othervise it returns -1
-				return item.SalesOrder === enteredText && sindex !== spath;
+				return item.Id === enteredText && sindex !== spath;
 			});
 			if (index > -1) {
 				this.recordexists = index;
 				that.getView().getModel("newModel").setProperty("/valueState", "Error");//set value state to error
-				MessageToast.show("entered sales order is alreay exists");
+				MessageToast.show("Entered entry already exists");
 
 				return;
 			}
@@ -183,7 +173,7 @@ sap.ui.define([
 				var sData = oEvent.getSource().getModel("sOrder1").getData().Sales;//get the table data
 				var sIndex = sData.length - 1;//get the length of the sdata
 				if (this.recordexists !== undefined) {
-					MessageToast.show("SalesOrder Number is already exists");
+					MessageToast.show("ID already exists");
 
 					return;
 
@@ -191,8 +181,8 @@ sap.ui.define([
 					for (var i = 0; i <= sIndex; i++) {
 
 						if (sData[i].editable === true) {//check feilds which are Appended by click on Add
-							if (sData[i].SalesOrder === "") {//check if the entered data is black then it throws a error message
-								MessageToast.show("SalesOrder Number is cannot be empty");
+							if (sData[i].Id === "") {//check if the entered data is black then it throws a error message
+								MessageToast.show("ID is cannot be empty");
 								return;
 							} else {
 								sData[i].editable = false;//if record is not blank set editable to false
