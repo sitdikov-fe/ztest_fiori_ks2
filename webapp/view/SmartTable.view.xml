@@ -1,47 +1,39 @@
-<mvc:View
-	controllerName="ztest_fiori_ks.controller.SmartTable"
-	xmlns="sap.m"
-	xmlns:core="sap.ui.core"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
-	xmlns:smartTable="sap.ui.comp.smarttable">
-	<!-- <smartFilterBar:SmartFilterBar
-		id="oSelectFilter"
-		entitySet="ztestStr001Set"
-		persistencyKey="SmartFilter_Explored"
-		considerAnalyticalParameters="true">
-		<smartFilterBar:layoutData>
-			<FlexItemData shrinkFactor="0" />
-		</smartFilterBar:layoutData>
-	</smartFilterBar:SmartFilterBar> -->
-	<smartTable:SmartTable
-		id="oSelectData"
-		smartFilterId="smartFilterBar"
-		tableType="ResponsiveTable"
-		editable="true"
-		entitySet="ztestStr001Set"
-		useVariantManagement="true"
-		useTablePersonalisation="true"
-		header="Позиции документа"
-		showRowCount="true"
-		useExportToExcel="false"
-		enableAutoBinding="true"
-		initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
-		persistencyKey="SmartTablePKey">
-		<!-- <smartTable:customToolbar>
-			<OverflawToolbar design="Transparent">
-				<ToolbarSpacer/>
-				<OverflawToolbarButton icon="sap-icon://save" press="onSave" tooltip="Save"/>
-				<OverflawToolbarButton icon="sap-icon://add" press="onAddRow" tooltip="Add new record"/>
-				<OverflawToolbarButton icon="sap-icon://delete" press="onDelete" tooltip="Delete record(s)"/>
-			</OverflawToolbar>
-		</smartTable:customToolbar> -->
-		<smartTable:customToolbar>
-			<OverflowToolbar design="Transparent">
-				<ToolbarSpacer />
-				<OverflowToolbarButton icon="sap-icon://add" press="onAddRow" tooltip="Add new record" />
-				<OverflowToolbarButton icon="sap-icon://delete" press="onDelete" tooltip="Delete record(s)" />
-			</OverflowToolbar>
-		</smartTable:customToolbar>
-	</smartTable:SmartTable>
+<mvc:View controllerName="ztest_fiori_ks.controller.SmartTest" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
+    xmlns:grid="sap.ui.layout.cssgrid" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:c="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+    class="GridDataSample" id="view">
+    <Shell>
+        <App>
+            <pages>
+                <m:Page>
+                    <Panel>
+                        <m:content>
+                            <smartTable:SmartTable
+                                id="oSelectData"
+                                smartFilterId="smartFilterBar"
+                                tableType="ResponsiveTable"
+                                editable="true"
+                                entitySet="ztestStr001Set"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="Позиции документа"
+                                showRowCount="true"
+                                useExportToExcel="false"
+                                enableAutoBinding="true"
+                                initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
+                                persistencyKey="SmartTablePKey">
+                                <smartTable:customToolbar>
+                                    <OverflowToolbar design="Transparent">
+                                        <ToolbarSpacer />
+                                        <OverflowToolbarButton icon="sap-icon://add" press="onAddRow" tooltip="Add new record" />
+                                        <OverflowToolbarButton icon="sap-icon://delete" press="onDelete" tooltip="Delete record(s)" />
+                                    </OverflowToolbar>
+                                </smartTable:customToolbar>
+                            </smartTable:SmartTable>
+                        </m:content>
+                    </Panel>
+                </m:Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>

@@ -1,39 +1,73 @@
-<mvc:View controllerName="ztest_fiori_ks.controller.SmartTest" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
-    xmlns:grid="sap.ui.layout.cssgrid" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:c="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
-    class="GridDataSample" id="view">
-    <Shell>
-        <App>
-            <pages>
-                <m:Page>
-                    <Panel>
-                        <m:content>
-                            <smartTable:SmartTable
-                                id="oSelectData"
-                                smartFilterId="smartFilterBar"
-                                tableType="ResponsiveTable"
-                                editable="true"
-                                entitySet="ztestStr001Set"
-                                useVariantManagement="true"
-                                useTablePersonalisation="true"
-                                header="Позиции документа"
-                                showRowCount="true"
-                                useExportToExcel="false"
-                                enableAutoBinding="true"
-                                initiallyVisibleFields="Id,Name,Nametype,Quantity,Price,Fullprice,Storege,Quanstorage"
-                                persistencyKey="SmartTablePKey">
-                                <smartTable:customToolbar>
-                                    <OverflowToolbar design="Transparent">
-                                        <ToolbarSpacer />
-                                        <OverflowToolbarButton icon="sap-icon://add" press="onAddRow" tooltip="Add new record" />
-                                        <OverflowToolbarButton icon="sap-icon://delete" press="onDelete" tooltip="Delete record(s)" />
-                                    </OverflowToolbar>
-                                </smartTable:customToolbar>
-                            </smartTable:SmartTable>
-                        </m:content>
-                    </Panel>
-                </m:Page>
-            </pages>
-        </App>
-    </Shell>
+<mvc:View controllerName="ztest_fiori_ks.controller.SmartTable" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<App>
+		<Page title="{i18n>title}" enableScrolling="true" class="sapUiContentPadding" showFooter="false" showSubHeader = "false">
+			<content>
+				<Table id="idSalesTable" growing="true" items="{ path: 'sOrder1>/Sales' }" mode="MultiSelect" selectionChange="onselectionChange">
+					<headerToolbar>
+						<OverflowToolbar id="otbSubheader">
+							<Title text="Products" level="H2"/>
+							<ToolbarSpacer/>
+							<Button id="editButton" text="Edit" type="Transparent" press="onEdit" visible = "{newModel>/edit}" />
+							<Button id="addButton" text="Add" type="Transparent" press="onAdd" visible="{newModel>/add}"/>
+							<Button id="deleteButton" text="Delete" type="Transparent" press="onDelete" visible= "{newModel>/delete}"/>
+							<Button id="_IDGenButton1" icon="sap-icon://action-settings" press="onPersoButtonPressed" />
+						</OverflowToolbar>
+					</headerToolbar>
+					<columns>
+						<Column minScreenWidth="Tablet">
+							<Text text="SalesOrder"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="SoldToParty"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="CustomerReference"/>
+						</Column>
+						<Column>
+							<Text text="RequestedDeliveryDate"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="OveralllStatus"/>
+						</Column>
+					</columns>
+					<items >
+						<ColumnListItem vAlign="Middle" press="tableSelected">
+							<cells>
+								<HBox visible="true">
+									<Text  text="{sOrder1>SalesOrder}" visible="{= ${newModel>/editable} === true ? ${sOrder1>neweditable} === true ? false:true :true}" />
+									<Input change="onChange" value="{sOrder1>SalesOrder}" visible="{= ${newModel>/editable} === true ?  ${sOrder1>neweditable} === true ? true:false:false}" valueState="{newModel>/valueState}" liveChange="onLiveChange"></Input>
+								</HBox>
+								<HBox visible="true">
+									<Text text="{sOrder1>SoldToParty}" visible="{= ${sOrder1>editable} === true ? false:true}"/>
+									<Input value="{sOrder1>SoldToParty}" visible="{= ${sOrder1>editable} === true ? true:false}"></Input>
+								</HBox>
+								<HBox visible="true">
+									<Text text="{sOrder1>CustomerReference}" visible="{= ${sOrder1>editable} === true ? false:true}"/>
+									<ComboBox  change="handleChange" items="{ path: 'statusModel>/reference' }" value="{sOrder1>CustomerReference}" visible="{= ${sOrder1>editable} === true ? true:false}">
+										<core:Item text="{statusModel>CustomerReference}"/>
+									</ComboBox>
+								</HBox>
+								<HBox visible="true">
+									<Text text="{sOrder1>RequestedDeliveryDate}" visible="{= ${sOrder1>editable} === true ? false:true}"/>
+									<DatePicker valueFormat="dd-MM-yyyy" displayFormat="dd-MM-yyyy" value="{sOrder1>RequestedDeliveryDate}" visible="{= ${sOrder1>editable} === true ? true:false}"></DatePicker>
+								</HBox>
+								<HBox visible="true">
+									<Text text="{newModel>/status}" visible="{= ${sOrder1>editable} === true ? false:true}"/>
+									<Text text="{newModel>/status1}" visible="{= ${sOrder1>editable} === true ? true:false}"/>
+								</HBox>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</content>
+			<footer>
+				<OverflowToolbar >
+					<ToolbarSpacer/>
+					<Button id="saveButton" text="Save" type="Accept" press="onSave" />
+					<Button id="cancelButton" text="Cancel" type="Reject" press="onCancel"/>
+				</OverflowToolbar>
+			</footer>
+		</Page>
+	</App>
 </mvc:View>
